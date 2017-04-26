@@ -46,9 +46,16 @@ export default class FAQ extends Component {
 		const groupedFaqs = _.groupBy(state.faqs, 'type');
 		return (
 			<div>
-				<div class='container' style={{ marginTop: '20px' }}>
-					<input value={state.searchQuery} className="input" type="text" placeholder="Search..." onInput={this.onChangeSearchText} />
-				</div>
+				<section className="section">
+					<div className="container">
+						<p class="control has-icons-left">
+							<input value={state.searchQuery} className="input" type="text" placeholder="Search..." onInput={this.onChangeSearchText} />
+							<span class="icon is-small is-left">
+							<i class="fa fa-search" />
+							</span>
+						</p>
+					</div>
+				</section>
 				<SectionContainer sectionType='Prizes' containerData={groupedFaqs.prize || []} />
 				<SectionContainer sectionType='Redeem and Refund' containerData={groupedFaqs.redeem_refund || []} />
 				<SectionContainer sectionType='Tech Support' containerData={groupedFaqs.tech_support || []} />

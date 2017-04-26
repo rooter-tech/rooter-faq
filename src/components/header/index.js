@@ -1,6 +1,5 @@
 import { h, Component } from 'preact';
 import { Link } from 'preact-router';
-import style from './style.less';
 
 export default class Header extends Component {
 	render() {
@@ -8,13 +7,18 @@ export default class Header extends Component {
 			<header>
 				<nav className='nav'>
 					<div class="nav-left">
-						<h1 className='nav-item'>Rooter FAQ</h1>
+						<a href="http://rooter.io/" class="nav-item is-primary">
+							<span class="icon">
+							<i class="fa fa-chevron-left" aria-hidden="true" />
+							</span>
+							<span>Back to website</span>
+						</a>
 					</div>
-					<div class="nav-center">
-						<a href="http://rooter.io/" className='nav-item'>Home</a>
+					<div class="nav-center is-centered">
 						<Link href="/" className='nav-item'>FAQ</Link>
 						<Link href="/rules" className='nav-item'>Rules</Link>
 					</div>
+					<div class="nav-right" />
 				</nav>
 			</header>
 		);

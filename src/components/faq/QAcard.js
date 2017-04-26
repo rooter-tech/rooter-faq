@@ -1,7 +1,8 @@
 import { h } from 'preact';
+import style from './styles.css';
 
 const QAcard = (props) => (
-	<div className="card">
+	<div className="card" class={style.cardStyle}>
 		<header className="card-header">
 			<p className="card-header-title">
 			{props.question}

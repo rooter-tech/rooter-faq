@@ -1,0 +1,7 @@
+.cardStyle {
+	border-bottom-color: blue!important;
+	border-top-color: blue!important;
+	border-right-color: red!important;
+	border-left-color: red!important;
+	border: 1px solid;
+}
