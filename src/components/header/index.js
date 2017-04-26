@@ -11,9 +11,9 @@ export default class Header extends Component {
 						<h1 className='nav-item'>Rooter FAQ</h1>
 					</div>
 					<div class="nav-center">
-						<Link href="http://rooter.io/" className='nav-item'>Home</Link>
-						<Link href="/profile" className='nav-item'>FAQ</Link>
-						<Link href="/profile/john" className='nav-item'>Rules</Link>
+						<a href="http://rooter.io/" className='nav-item'>Home</a>
+						<Link href="/" className='nav-item'>FAQ</Link>
+						<Link href="/rules" className='nav-item'>Rules</Link>
 					</div>
 				</nav>
 			</header>

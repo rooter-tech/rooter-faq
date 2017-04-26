@@ -1,0 +1,98 @@
+[
+        {
+            "id" : 1,
+            "question" : "What is the prize money for winning a game on Rooter?",
+            "answer" : "<p>PayTM cash prize details:</p><p>Winner - 250 INR <br> 2nd place - 200 INR <br> 3rd place - 150 INR <br> 4th place - 100 INR <br> 5th to 10th place - 50 INR</p><p>Prize Money remains the same for both LIVE and PRE match. It is also the same for Top 10 positions of Weekly Leaderboards.</p>",
+            "type" : "prize"
+        },
+        {
+            "id" : 2,
+            "question" : "How long does it take to receive the prize money?",
+            "answer" : "<p>It takes from 4-7 days to receive the prize money. You will receive the prize money in your PayTM wallet.</p>",
+            "type" : "prize"
+        },
+        {
+            "id" : 3,
+            "question" : "How do I receive the Prize Money?",
+            "answer" : "<p>You need to have a registered PayTM account and you are required to update your PayTM registered number on the app. <br> <em>Homepage &gt; Menu &gt; Edit Profile</em></p>",
+            "type" : "prize"
+        },
+        {
+            "id" : 4,
+            "question" : "How prize money is calculated in case of a tie between multiple users?",
+            "answer" : "<p>Prize money is divided among users finishing in the same position. <br> Example - If 3 people have stood first then prize money will be : <br> <em>250+200+(150/3) = 200 INR each.</em></p>",
+            "type" : "prize"
+        },
+        {
+            "id" : 5,
+            "question" : "Where should I contact if I have not received my prize money?",
+            "answer" : "<p>You can contact us on our Facebook page : <br> <a href='https://www.facebook.com/hellorooter/'>https://www.facebook.com/hellorooter/</a></p>",
+            "type" : "prize"
+        },
+        {
+            "id" : 6,
+            "question" : "Do I get any prize for playing trivia?",
+            "answer" : "<p>No, trivia is to increase the sports knowledge and act as a build-up to the Live matches.</p>",
+            "type" : "prize"
+        },
+        {
+            "id" : 7,
+            "question" : "How do I redeem my Rooter Coins?",
+            "answer" : "<p>Click on the Redeem section of Rooter’s homepage. You can redeem your Rooter Coins for Amazon Vouchers, PayTM Coupons and other exciting merchandise. You can also find Redeem option in Menu.</p>",
+            "type" : "redeem_refund"
+        },
+        {
+            "id" : 8,
+            "question" : "What is the next step after redeeming my coins for PayTM coupon?",
+            "answer" : "<p>Kindly follow this link <a href='https://paytm.com/corporategiftcardsredemption'>https://paytm.com/corporategiftcardsredemption</a> and submit the PayTM coupon received on your registered phone number with Rooter.</p>",
+            "type" : "redeem_refund"
+        },
+        {
+            "id" : 9,
+            "question" : "Do I need to verify my phone number before redeeming the coins?",
+            "answer" : "<p>Yes, users will need to verify their phone number by submitting a 6-digit OTP which they will receive on their registered phone number with Rooter.</p>",
+            "type" : "redeem_refund"
+        },
+        {
+            "id" : 10,
+            "question" : "What is the minimum number of Rooter Coins required to redeem?",
+            "answer" : "<p>Minimum number of coins needed for PayTM coupons - 450, Amazon Vouchers - 250.</p>",
+            "type" : "redeem_refund"
+        },
+        {
+            "id" : 11,
+            "question" : "When does Rooter refund my coins during a LIVE game?",
+            "answer" : "<p>If a round during the match has been canceled, or has been washed away due to rain, we will refund the coins for that particular round.</p>",
+            "type" : "redeem_refund"
+        },
+        {
+            "id" : 12,
+            "question" : "How long does it take for me to get my coin refund?",
+            "answer" : "<p>It takes from 4-5 days for the coins to be refunded to your account.</p>",
+            "type" : "redeem_refund"
+        },
+        {
+            "id" : 13,
+            "question" : "Why I am unable to see the cards despite getting the notification for a new round?",
+            "answer" : "<p>Kindly check the time zone on your device and make sure it is set according to your current location. After changing the timezone, you will be able to see the cards for the LIVE or the next round.</p>",
+            "type" : "tech_support"
+        },
+        {
+            "id" : 14,
+            "question" : "Why am I not able to access the match forum?",
+            "answer" : "<p>If you are unable to enter the match forum, it is due to a BAN levied by the Rooter Team for either being offensive or promoting third party apps in the match forum. To re-instate your profile, kindly drop a mail to <a href='mailto:admin@rooter.io'>admin@rooter.io</a>, mentioning your inability to access the match forum.</p>",
+            "type" : "tech_support"
+        },
+        {
+            "id" : 15,
+            "question" : "My app is lagging / crashing, what should I do?",
+            "answer" : "<p>For any technical support concerning the Rooter App, drop a mail from your registered email id on Rooter at <a href='mailto:support@rooter.io'>support@rooter.io</a> with the following information : <br> A) Your device name and model number, <br> B) Android/iOS version, <br> C) Screenshot of the exact issue, <br> D) Registered phone number on Rooter.</p>",
+            "type" : "tech_support"
+        },
+        {
+            "id" : 16,
+            "question" : "Why am I not getting the notification for new match or round?",
+            "answer" : "<p>For Xiaomi MiUi users :</p><ul><li>Go to Security &gt; Permissions &gt; Autostart &gt; Check <strong>Rooter</strong>.</li><li>Go to Settings &gt; Installed Apps &gt; All &gt; Rooter &gt; Other Permissions &gt; Check <strong>Start in background</strong> and <strong>Show on lock screen</strong>.</li></ul><p>For other users :</p><ul><li>Go to <strong>Settings</strong> then select <strong>App manager</strong> and choose <strong>Rooter</strong>, after it click <strong>Permission Management</strong> and find <strong>Auto-start</strong> option, make sure it is set to allow.</li><li>Also change your wifi settings to keep wifi awake on phone lock.Go to advanced settings in Wifi.</li></ul>",
+            "type" : "tech_support"
+        }
+]

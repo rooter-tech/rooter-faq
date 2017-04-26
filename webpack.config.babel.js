@@ -16,7 +16,7 @@ module.exports = {
 
 	output: {
 		path: path.resolve(__dirname, "build"),
-		publicPath: '/faq/',
+		publicPath: ENV === 'development' ? '/' : '/faq/',
 		filename: 'bundle.js'
 	},
 
