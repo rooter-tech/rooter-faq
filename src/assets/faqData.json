@@ -20,7 +20,7 @@
         {
             "id" : 4,
             "question" : "How prize money is calculated in case of a tie between multiple users?",
-            "answer" : "<p>Prize money is divided among users finishing in the same position. <br> Example - If 3 people have stood first then prize money will be : <br> <em>250+200+(150/3) = 200 INR each.</em></p>",
+            "answer" : "<p>Prize money is divided among users finishing in the same position. <br> Example - If 3 people have stood first then prize money will be : <br> <em>(250+200+150)/3 = 200 INR each.</em></p>",
             "type" : "prize"
         },
         {

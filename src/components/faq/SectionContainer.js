@@ -12,7 +12,10 @@ const SectionContainer = (props) => (
 			</div>
 			<div style={{ marginTop: '20px' }}>
 				{
-					props.containerData.length > 0 ?
+					props.queryStr && props.queryStr.length < 4 ?
+						<h2 class='subtitle'>Please enter search text having more than 3 characters</h2>
+						:
+						props.containerData.length > 0 ?
 						_.chunk(props.containerData, 3).map((rowData) =>
 						<div className='columns'>
 							{
@@ -23,7 +26,7 @@ const SectionContainer = (props) => (
 						</div>
 						)
 						:
-						<h2 class="subtitle">No results found !</h2>
+						<h2 class="subtitle">No results found</h2>
 				}
 			</div>
 		</div>

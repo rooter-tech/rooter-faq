@@ -12,16 +12,16 @@ const idx = lunr(function () {
 		this.add(qa);
 	}, this);
 });
+const faqByKey = _.keyBy(faqData, 'id');
 
-const computeFilteredFAQ = (faqCollection, matchedIDs, searchStr) => {
-	if (searchStr) {
+const computeFilteredFAQ = (matchedIDs, searchStr) => {
+	if (searchStr && searchStr.length > 3) {
 		if (matchedIDs.length > 0) {
-			const faqByKey = _.keyBy(faqCollection, 'id');
 			return matchedIDs.map((qaID) => faqByKey[qaID]);
 		}
 		return [];
 	}
-	return faqCollection;
+	return faqData;
 };
 
 export default class FAQ extends Component {
@@ -38,7 +38,7 @@ export default class FAQ extends Component {
 		this.setState(() => {
 			return {
 				searchQuery : newStr,
-				faqs: computeFilteredFAQ(faqData, idx.search(newStr).map(item=>item.ref), newStr)
+				faqs: computeFilteredFAQ(idx.search(newStr).map(item=>item.ref), newStr)
 			};
 		});
 	}
@@ -56,9 +56,9 @@ export default class FAQ extends Component {
 						</p>
 					</div>
 				</section>
-				<SectionContainer sectionType='Prizes' containerData={groupedFaqs.prize || []} />
-				<SectionContainer sectionType='Redeem and Refund' containerData={groupedFaqs.redeem_refund || []} />
-				<SectionContainer sectionType='Tech Support' containerData={groupedFaqs.tech_support || []} />
+				<SectionContainer queryStr={state.searchQuery} sectionType='Prizes' containerData={groupedFaqs.prize || []} />
+				<SectionContainer queryStr={state.searchQuery} sectionType='Redeem and Refund' containerData={groupedFaqs.redeem_refund || []} />
+				<SectionContainer queryStr={state.searchQuery} sectionType='Tech Support' containerData={groupedFaqs.tech_support || []} />
 			</div>
 		);
 	}
