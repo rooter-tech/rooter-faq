@@ -26,7 +26,7 @@
         {
             "id" : 5,
             "question" : "Where should I contact if I have not received my prize money?",
-            "answer" : "<p>You can contact us on our Facebook page : <br> <a href='https://www.facebook.com/hellorooter/'>https://www.facebook.com/hellorooter/</a></p>",
+            "answer" : "<p>You can contact us on our Facebook page : <br> <a href='https://www.facebook.com/hellorooter/' target='_blank'>https://www.facebook.com/hellorooter/</a></p>",
             "type" : "prize"
         },
         {
@@ -44,7 +44,7 @@
         {
             "id" : 8,
             "question" : "What is the next step after redeeming my coins for PayTM coupon?",
-            "answer" : "<p>Kindly follow this link <a href='https://paytm.com/corporategiftcardsredemption'>https://paytm.com/corporategiftcardsredemption</a> and submit the PayTM coupon received on your registered phone number with Rooter.</p>",
+            "answer" : "<p>Kindly follow this link <a href='https://paytm.com/corporategiftcardsredemption' target='_blank'>https://paytm.com/corporategiftcardsredemption</a> and submit the PayTM coupon received on your registered phone number with Rooter.</p>",
             "type" : "redeem_refund"
         },
         {
@@ -80,13 +80,13 @@
         {
             "id" : 14,
             "question" : "Why am I not able to access the match forum?",
-            "answer" : "<p>If you are unable to enter the match forum, it is due to a BAN levied by the Rooter Team for either being offensive or promoting third party apps in the match forum. To re-instate your profile, kindly drop a mail to <a href='mailto:admin@rooter.io'>admin@rooter.io</a>, mentioning your inability to access the match forum.</p>",
+            "answer" : "<p>If you are unable to enter the match forum, it is due to a BAN levied by the Rooter Team for either being offensive or promoting third party apps in the match forum. To re-instate your profile, kindly drop a mail to <a href='mailto:admin@rooter.io' target='_blank'>admin@rooter.io</a>, mentioning your inability to access the match forum.</p>",
             "type" : "tech_support"
         },
         {
             "id" : 15,
             "question" : "My app is lagging / crashing, what should I do?",
-            "answer" : "<p>For any technical support concerning the Rooter App, drop a mail from your registered email id on Rooter at <a href='mailto:support@rooter.io'>support@rooter.io</a> with the following information : <br> A) Your device name and model number, <br> B) Android/iOS version, <br> C) Screenshot of the exact issue, <br> D) Registered phone number on Rooter.</p>",
+            "answer" : "<p>For any technical support concerning the Rooter App, drop a mail from your registered email id on Rooter at <a href='mailto:support@rooter.io' target='_blank'>support@rooter.io</a> with the following information : <br> A) Your device name and model number, <br> B) Android/iOS version, <br> C) Screenshot of the exact issue, <br> D) Registered phone number on Rooter.</p>",
             "type" : "tech_support"
         },
         {
