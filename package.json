@@ -6,7 +6,7 @@
     "dev": "cross-env NODE_ENV=development webpack-dev-server --inline --hot --progress",
     "prestart": "npm run build",
     "build": "rm -rf build && cross-env NODE_ENV=production webpack -p --progress",
-    "prebuild": "mkdirp build && ncp src/assets build/assets",
+    "prebuild": "mkdirp build",
     "lint": "eslint src test"
   },
   "keywords": [
