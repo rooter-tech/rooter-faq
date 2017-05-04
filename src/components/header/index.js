@@ -12,7 +12,7 @@ export default class Header extends Component {
 					</div>
 					<div class="nav-right">
 						<div class='nav-item'>
-								<a class="button is-danger" href='mailto:support@rooter.io'>
+								<a class="button is-danger" href='mailto:support@rooter.io' style={{ padding: '15px' }}>
 									<span>Report</span>
 									<span class="icon" style={{ marginRight: '0px' }}>
 										<i class="fa fa-bug" />
