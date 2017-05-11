@@ -7,6 +7,7 @@ export default class Header extends Component {
 			<header>
 				<nav className='nav'>
 					<div class="nav-left">
+						<Link href="/howtoplay" className='nav-item'>How to Play</Link>
 						<Link href="/faq" className='nav-item'>FAQ</Link>
 						<Link href="/rules" className='nav-item'>Rules</Link>
 					</div>

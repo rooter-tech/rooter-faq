@@ -4,6 +4,7 @@ import { Router } from 'preact-router';
 import Header from './header';
 import Rules from './rules';
 import FAQ from './faq';
+import HowToPlay from './howtoplay';
 
 export default class App extends Component {
 	/** Gets fired when the route changes.
@@ -19,6 +20,7 @@ export default class App extends Component {
 			<div id="app">
 				<Header />
 				<Router onChange={this.handleRoute}>
+					<HowToPlay path="/howtoplay" />
 					<FAQ path="/faq" />
 					<Rules path="/rules/" />
 				</Router>
