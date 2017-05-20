@@ -59,7 +59,9 @@
   },
   "dependencies": {
     "bulma": "^0.4.1",
+    "compression": "^1.6.2",
     "es6-promise": "^4.1.0",
+    "express": "^4.15.3",
     "lodash": "^4.17.4",
     "lunr": "^2.0.3",
     "preact": "^8.1.0",

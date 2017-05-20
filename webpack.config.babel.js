@@ -15,8 +15,8 @@ module.exports = {
 	entry: './index.js',
 
 	output: {
-		path: path.resolve(__dirname, "build"),
-		publicPath: ENV === 'development' ? '/' : '/howtoplay/',
+		path: path.resolve(__dirname, "build/web"),
+		publicPath: ENV === 'development' ? '/' : '/web/',
 		filename: 'bundle.js'
 	},
 
@@ -101,7 +101,8 @@ module.exports = {
 			minify: { collapseWhitespace: true }
 		}),
 		new CopyWebpackPlugin([
-			{ from: './favicon.ico', to: './' }
+			{ from: './favicon.ico', to: './' },
+			{ from: '../website', to: '../' }
 		])
 	]).concat(ENV==='production' ? [
 		new V8LazyParseWebpackPlugin(),

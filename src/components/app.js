@@ -20,9 +20,9 @@ export default class App extends Component {
 			<div id="app">
 				<Header />
 				<Router onChange={this.handleRoute}>
-					<HowToPlay path="/howtoplay" />
-					<FAQ path="/faq" />
-					<Rules path="/rules/" />
+					<HowToPlay path="/web/howtoplay" />
+					<FAQ path="/web/faq" />
+					<Rules path="/web/rules/" />
 				</Router>
 			</div>
 		);
