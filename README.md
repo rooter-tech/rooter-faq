@@ -1,3 +1,3 @@
-# Rooter FAQ
+# Rooter Website
 
-FAQ Section for the rooter website
+Rooter Website + SPA for howtoplay,faq,rules
