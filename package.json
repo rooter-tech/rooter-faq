@@ -1,7 +1,7 @@
 {
-  "name": "rooter-faq",
+  "name": "rooter-web",
   "version": "1.0.0",
-  "description": "FAQ section for the rooter website",
+  "description": "Rooter website and web SPA",
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --inline --hot --progress",
     "prestart": "npm run build",
@@ -12,7 +12,7 @@
   "keywords": [
     "preact",
     "rooter",
-    "faq"
+    "website"
   ],
   "license": "Rooter",
   "author": "Divyanshu Tomar (divyanshu@rooter.io)",
