@@ -1,0 +1,347 @@
+#slidingWindow {
+overflow:hidden;
+width: 470px;
+height: 500px;
+background-color: red;
+}
+
+.slidingSection {
+margin: 5px;
+background-color: green;
+width: 470px;
+height: 400px;
+float: left;
+}
+
+.clearfix:after { 
+content: "."; 
+visibility: hidden; 
+display: block; 
+height: 0; 
+clear: both;
+}
+
+
+.icon_sports {
+  width: 39px;
+  height: 70px;
+  object-fit: contain;
+  opacity: 2.0;
+  ;
+}
+
+.icon_comments {
+  width: 990px;
+  height: 70px;
+  object-fit: contain;
+  opacity: 2.0;
+}
+
+.icon_prediction {
+  width: 61px;
+  height: 70px;
+  object-fit: contain;
+  opacity: 2.0;
+}
+
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
+.section-titles {
+    color: #ffffff;
+    font-size: 36px;
+    font-weight: 300;
+    letter-spacing: 0;
+    line-height: 38px;
+    margin-bottom: 36px;
+    position: relative;
+}
+
+.section-titles::before {
+    background-image: url("../img/banner/title-border.png");
+    content: "";
+    display: block;
+    height: 18px;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: 54px;
+    width: 132px;
+}
+
+.section-texts {
+    color: #ffffff;
+    line-height: 24px;
+}
+.section-textss {
+    color: #ffffff;
+    line-height: 26px;
+    font-weight: bold;
+}
+
+.section-textsss {
+    color: #000000;
+    line-height: 26px;
+    font-weight: bold;
+}
+
+.partner-text {
+  font-size: 36px;
+  color: #000000;
+  font-weight: normal;
+	line-height: 40px;
+}
+
+.partner-text a{
+  color: #000000;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+
+.line {
+  object-fit: contain;
+}
+
+
+.apple {
+  width: 177px;
+  height: 55px;
+  object-fit: contain;
+}
+
+.google-play {
+  width: 177px;
+  height: 55px;
+  object-fit: contain;
+}
+
+.action-button {
+  width: 120px;
+  height: 40px;
+  object-fit: contain;
+    background: #DA0B33 none repeat scroll 0 0;
+    border-radius: 25px;
+    color: #fff;
+    display: inline-block;
+    line-height: 18px;
+    padding: 10px 18px 9px;
+}
+
+ .press{
+  width: 176.5px;
+  height: 51.2px;
+  object-fit: contain;
+}
+
+.box {
+  width: 1125px;
+  height: 140px;
+  border-radius: 20px;
+  background-color: #000000;
+  box-shadow: 0 20px 70px 0 rgba(0, 0, 0, 0.1);
+}
+
+.live {
+  height: 26px;
+  width: 163px;
+  font-size: 17.75px;
+  font-weight: bold;
+  text-align: left;
+  margin-top: 30px;
+  margin-left: 70px;
+  color: #ffffff;
+}
+
+.live1 {
+  width: 250px;
+  height: 38px;
+  font-size: 13px;
+  text-align: left;
+  margin-left: 70px;
+  color: #ffffff;
+}
+
+.arrow {
+  width: 28.7px;
+  height: 22.2px;
+  object-fit: contain;
+  border-radius: 1px;
+ 
+}
+
+.win {
+  width: 37px;
+  height: 40px;
+  object-fit: contain;
+  background-color: #000000;
+}
+
+.feature {
+  
+  height: 76px;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.33;
+  text-align: center;
+  color: #9c9c9c;
+  margin:auto;
+}
+
+
+.text{
+  width: 197px;
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+  color: #4e4e4e;
+}
+
+
+.product {
+  object-fit: contain;
+}
+.base {
+  height: 152px;
+  background-image: linear-gradient(#f6f7fb, #f6f7fb), linear-gradient(267deg, #50d2c2, #5a90e0);
+}
+
+.partner {
+  font-size: 30px;
+  font-weight: 500;
+  color: #000000;
+}
+
+
+
+.learn-get-links .feature-chat {
+    background: transparent none repeat scroll 0 0;
+    border: 1px solid #f13b3e;
+    background-color: #ff0000;
+    color: #ffffff;
+    background-image: linear-gradient(#da0b33, #da0b33), linear-gradient(72deg, #ff0956, #ff2e52 61%, #ff5310);
+    border-radius: 2px;
+    color: #000000;
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 12px 23px;
+    text-transform: uppercase;
+}
+
+
+.founder {
+  object-fit: contain;
+	margin: 20px 20px 0px 20px; }
+
+
+.founder-head {
+  font-size: 30px;
+  line-height: 40px;
+  font-weight: bold;
+  text-align: left;
+  color: #0a1829;
+}
+
+.founder-designation {
+  font-size: 26px;
+  text-align: left;
+  color: #f57462;
+}
+
+.founder-body {
+  font-size: 16px;
+  text-align: left;
+  color: #4a4a4a;
+}
+.founder-words {
+  font-size: 16px;
+  font-weight: bold;
+  font-style: italic;
+  text-align: left;
+  color: #4e4e4e;
+}
+.img-team {
+  height: auto;	
+  object-fit: contain;
+}
+
+.testimonial {
+  object-fit: contain;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), linear-gradient(to right, #3e59b9, #aa3f86);
+}
+.partner-logo{
+	height: 80px;
+	margin:auto 0px; 
+text-align-last: center;
+}
+.partner-logo img{
+	width: 70%;
+	vertical-align: middle;
+}
+.caption {
+text-align-last: center;
+  color: #76766f;
+	min-height: 100px;
+  font-size: 13px;
+
+}
+.caption img{
+	min-height: 80px;
+}
+.lead {
+  width: 600px;
+  height: 24px;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+  color: #76766f;
+}
+.centerAlignText {
+  text-align: center;
+}
+
+#yt-player {
+  height: 50vh;
+}
