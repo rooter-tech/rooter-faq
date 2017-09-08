@@ -5,6 +5,8 @@ import Header from './header';
 import Rules from './rules';
 import FAQ from './faq';
 import HowToPlay from './howtoplay';
+import TandC from './termsconditions';
+
 
 export default class App extends Component {
 	/** Gets fired when the route changes.
@@ -23,6 +25,7 @@ export default class App extends Component {
 					<HowToPlay path="/web/howtoplay" />
 					<FAQ path="/web/faq" />
 					<Rules path="/web/rules/" />
+					<TandC path="/web/termsconditions"/>
 				</Router>
 			</div>
 		);
