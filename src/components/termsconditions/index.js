@@ -72,12 +72,18 @@ export default class TermsConditions extends Component {
 					sectionName='Groups Rulebook'
 					sectionContent={
 						<div>
+							<p>A group is similar to WhatsApp groups with added functionality like streaming match commentary and play prediction game along with friends. The group admin reserve the rights to add a LIVE match to a group for prediction based on the request of the group members. Once the match is added by the admin</p>
+							<ul>
+								<li>The other members have the right to accept or reject a match</li>
+								<li>Minimum 5 team members are needed to accept a match in order to play the prediction game within the group</li>
+								<li>A user can be a part of group prediction till the first slot for LIVE match prediction is open</li>
+							</ul>
 							<p>Percentage distribution of rooter coins:</p>
 							<GroupTable />
 							<p><strong>Note</strong>:</p>
 							<ul>
 								<li>In case of draw the coins will be distributed equally among the draw members e.g. If user A and B stand first then both will get (44+24)/2% and then the 3rd winner will get his/her own specified coins i.e. 14%.</li>
-								<li>Rooter reserve the rights to take the coins back in case any fraud is detected</li>
+								<li>Rooter reserve the rights to take the coins back in case any fraud is detected.</li>
 							</ul>
 						</div>
 					}
