@@ -34,14 +34,22 @@ export default class TermsConditions extends Component {
 					}
 				/>
 				<SectionContainer
-					sectionName='Prize Money Distribution'
+					sectionName='Coupons & Prize Money Distribution'
+					anchoredTag='prize-money-distribution'
 					sectionContent={
 						<div>
+							<ul>
+							<li>
 							<p>All the prize money are sent within 3-4 days of a match’s end. You need to have a registered PayTM account and you are required to update your PayTM registered number on the app. Homepage &gt; Menu &gt; Edit Profile</p>
 							<p>Prize money is divided among users finishing in the same position.<br />
 							Example - If 3 people have stood first then prize money will be :<br />
 							(250+200+150)/3 = 200 INR each.</p>
 							<p>Users will need to verify their phone number by submitting a 6-digit OTP which they will receive on their registered phone number with Rooter.</p>
+							</li>
+							<li>
+							<p>Rooter reserves the right to distribute coupons subjected to its availability or other unavoidable circumstances.</p>
+							</li>
+							</ul>
 						</div>
 					}
 				/>

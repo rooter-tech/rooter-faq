@@ -2,7 +2,7 @@ import { h } from 'preact';
 import _ from 'lodash';
 
 const SectionContainer = (props) => (
-	<section className="section" id={_.kebabCase(props.sectionName)}>
+	<section className="section" id={props.anchoredTag || _.kebabCase(props.sectionName)}>
 		<div className="container">
 			<div className="heading">
 				<h1 className="title">{props.sectionName}</h1>
