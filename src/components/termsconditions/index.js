@@ -92,6 +92,7 @@ export default class TermsConditions extends Component {
 							<ul>
 								<li>In case of draw the coins will be distributed equally among the draw members e.g. If user A and B stand first then both will get (44+24)/2% and then the 3rd winner will get his/her own specified coins i.e. 14%.</li>
 								<li>Rooter reserve the rights to take the coins back in case any fraud is detected.</li>
+								<li>Rooter is not responsible for any illegal or financial transaction happening within the private group.</li>
 							</ul>
 						</div>
 					}
