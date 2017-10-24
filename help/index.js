@@ -1,7 +1,7 @@
 // import 'promise-polyfill';
 // import 'isomorphic-fetch';
 import { h, render } from 'preact';
-import 'bulma/css/bulma.css';
+// import 'bulma/css/bulma.css';
 import 'unfetch/polyfill';
 require('es6-promise').polyfill();
 import './style';

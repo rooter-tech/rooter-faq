@@ -1,37 +1,44 @@
 import { h, Component } from 'preact';
+import axios from 'axios';
+import styles from './styles.css';
+import API from '../api';
+import { newsFeedPageSize } from '../constants';
+import NewsCard from './NewsCard';
 // import _ from 'lodash';
 
 export default class NewsFeed extends Component {
-	constructor(props) {
-		super(props);
-		this.state = {
-			NewsFeedData: undefined,
-			isLoadingJSON: true,
-			errorMessage: ''
-		};
+	state = {
+		newsData: [],
+		currentPageNum: 1
 	}
-	// componentDidMount() {
-	// 	fetch("https://s3-ap-southeast-1.amazonaws.com/rooter-faq/NewsFeed.json")
-	// 	.then((response) => response.json())
-	// 	.then((data) => {
-	// 		this.setState(() => {
-	// 			return {
-	// 				isLoadingJSON: false,
-	// 				errorMessage: '',
-	// 				NewsFeedData: data
-	// 			};
-	// 		});
-	// 	})
-	// 	.catch(() => {
-	// 		this.setState({
-	// 			errorMessage: 'Some error occured',
-	// 			isLoadingJSON: false
-	// 		});
-	// 	});
-	// }
+	componentDidMount() {
+		this.fetchNewsItems();
+	}
+	fetchNewsItems = () => {
+		axios.get(`${API.baseURL}News/feed`, {
+			params: {
+				pageNo: this.state.currentPageNum,
+				pageSize: newsFeedPageSize
+			}
+		}).then((response) => {
+			this.setState(prevState =>
+				({ newsData: response.data, currentPageNum: prevState.currentPageNum + 1 }));
+		});
+	}
 	render(props, state) {
+		console.log(state.newsData);
 		return (
-			<div>Here</div>
+			<div class={styles.rootContainer}>
+				<div class="columns is-multiline">
+					{
+						state.newsData.map(news => (
+							<div class="column is-half">
+								<NewsCard newsData={news} />
+							</div>
+						))
+					}
+				</div>
+			</div>
 		);
 	}
 }

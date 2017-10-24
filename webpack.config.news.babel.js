@@ -7,6 +7,7 @@ import ReplacePlugin from 'replace-bundle-webpack-plugin';
 import path from 'path';
 import V8LazyParseWebpackPlugin from 'v8-lazy-parse-webpack-plugin';
 const ENV = process.env.NODE_ENV || 'development';
+const API_ENV = process.env.API_TYPE || 'dev';
 
 const CSS_MAPS = ENV!=='production';
 
@@ -94,7 +95,8 @@ module.exports = {
 			disable: ENV!=='production'
 		}),
 		new webpack.DefinePlugin({
-			'process.env.NODE_ENV': JSON.stringify(ENV)
+			'process.env.NODE_ENV': JSON.stringify(ENV),
+			'process.env.API_TYPE': JSON.stringify(API_ENV)
 		}),
 		new HtmlWebpackPlugin({
 			template: './index.ejs',
