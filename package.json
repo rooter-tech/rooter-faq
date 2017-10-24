@@ -3,9 +3,11 @@
   "version": "1.0.0",
   "description": "Rooter website and web SPA",
   "scripts": {
-    "dev": "cross-env NODE_ENV=development webpack-dev-server --inline --hot --progress",
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --config webpack.config.news.babel.js  --inline --hot --progress",
     "prestart": "npm run build",
-    "build": "rm -rf build && cross-env NODE_ENV=production webpack -p --progress",
+    "build:main": "cross-env NODE_ENV=production webpack --config webpack.config.help.babel.js -p --progress",
+    "build:news": "cross-env NODE_ENV=production webpack --config webpack.config.news.babel.js -p --progress",
+    "build": "rm -rf build && npm run build:main && npm run build:news",
     "prebuild": "mkdirp build",
     "lint": "eslint src test"
   },
@@ -26,7 +28,6 @@
     "babel-plugin-transform-react-jsx": "^6.8.0",
     "babel-preset-es2015": "^6.14.0",
     "babel-preset-stage-0": "^6.5.0",
-    "babel-register": "^6.14.0",
     "babel-runtime": "^6.11.6",
     "copy-webpack-plugin": "^4.0.1",
     "core-js": "^2.4.1",
