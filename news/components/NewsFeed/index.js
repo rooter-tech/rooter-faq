@@ -33,7 +33,14 @@ export default class NewsFeed extends Component {
 					{
 						state.newsData.map(news => (
 							<div class="column is-half">
-								<NewsCard newsData={news} />
+								{
+									news.description ?
+									<a href={`/news/${news.id}/${news.slug}`} >
+										<NewsCard newsData={news} />
+									</a>
+									:
+									<NewsCard newsData={news} />
+								}
 							</div>
 						))
 					}

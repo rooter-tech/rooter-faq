@@ -2,10 +2,8 @@ import { h, Component } from 'preact';
 import { Router } from 'preact-router';
 
 import Header from './header';
-// import Rules from './rules';
-// import FAQ from './faq';
 import NewsFeed from './NewsFeed';
-// import TandC from './termsconditions';
+import NewsDetail from './NewsDetail';
 
 
 export default class App extends Component {
@@ -23,6 +21,7 @@ export default class App extends Component {
 				<Header />
 				<Router onChange={this.handleRoute}>
 					<NewsFeed path="/news/" />
+					<NewsDetail path="/news/:newsid/:newsslug" />
 				</Router>
 			</div>
 		);

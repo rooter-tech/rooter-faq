@@ -1,0 +1,18 @@
+.rootContainer {
+	padding: 5% 15%;
+}
+
+.headerImageStyles {
+	max-height: 540px;
+}
+@media screen and (max-width: 1023px) {
+	.rootContainer {
+		padding: 5% 7%;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.rootContainer {
+		padding: 5%;
+	}
+}
