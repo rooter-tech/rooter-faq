@@ -1,0 +1,19 @@
+.rootContainer {
+	padding: 5% 15%;
+}
+
+.newsContentStyles {
+	margin: 5% auto;
+}
+
+@media screen and (max-width: 1023px) {
+	.rootContainer {
+		padding: 5% 7%;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.rootContainer {
+		padding: 5%;
+	}
+}
