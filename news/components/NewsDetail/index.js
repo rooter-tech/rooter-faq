@@ -2,6 +2,8 @@ import { h, Component } from 'preact';
 import axios from 'axios';
 import styles from './styles.css';
 import API from '../api';
+import Loading from '../common/Loading';
+import DownloadAppCard from '../common/DownloadAppCard';
 // import _ from 'lodash';
 
 export default class NewsDetail extends Component {
@@ -22,7 +24,7 @@ export default class NewsDetail extends Component {
 		const { newsDetails } = state;
 		return (
 			state.isFetchingNewsDetails ?
-				<div>Loading</div>
+				<Loading />
 				:
 				<div>
 					<div class={styles.rootContainer}>
@@ -35,6 +37,7 @@ export default class NewsDetail extends Component {
 					</figure>
 					<div class={styles.rootContainer}>
 						<div dangerouslySetInnerHTML={{__html: newsDetails.description }} />
+						<DownloadAppCard />
 					</div>
 				</div>
 		);

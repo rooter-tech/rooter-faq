@@ -1,0 +1,47 @@
+.downloadAppRoot {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 0;
+}
+.downloadContent {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    justify-content: space-between;
+}
+.statContent {
+    font-size: 1.5rem;
+    max-width: 80%;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+.statContent > span {
+    font-weight: 500;
+}
+.appScreenshotStyles {
+    height: 25vh;
+}
+.rooterLogoStyles {
+    width: 40%;
+}
+.downloadBtnStyles {
+    width: 80%;
+    color: #fff;
+    border-radius: 5px;
+    // box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
+    background: #FF0956;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FF0956, #FF5310);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FF0956, #FF5310); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+}
+.downloadBtnStyles:hover {
+    color: #FAFAFA;
+}
+@media screen and (max-width: 768px) {
+    .statContent {
+        font-size: 1rem;
+        max-width: 95%;
+        font-weight: 300;
+        text-transform: uppercase;
+    }
+}

@@ -72,6 +72,7 @@
     "preact-router": "^2.4.1",
     "promise-polyfill": "^6.0.2",
     "proptypes": "^0.14.3",
+    "react-infinite-scroller": "^1.0.15",
     "unfetch": "^2.1.2"
   },
   "main": "webpack.config.babel.js",

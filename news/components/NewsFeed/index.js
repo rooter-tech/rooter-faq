@@ -4,15 +4,14 @@ import styles from './styles.css';
 import API from '../api';
 import { newsFeedPageSize } from '../constants';
 import NewsCard from './NewsCard';
-// import _ from 'lodash';
+import InfiniteScroll from 'react-infinite-scroller';
+import Loading from '../common/Loading';
 
 export default class NewsFeed extends Component {
 	state = {
 		newsData: [],
-		currentPageNum: 1
-	}
-	componentDidMount() {
-		this.fetchNewsItems();
+		currentPageNum: 1,
+		hasMoreItems: true
 	}
 	fetchNewsItems = () => {
 		axios.get(`${API.baseURL}News/feed`, {
@@ -21,30 +20,41 @@ export default class NewsFeed extends Component {
 				pageSize: newsFeedPageSize
 			}
 		}).then((response) => {
-			this.setState(prevState =>
-				({ newsData: response.data, currentPageNum: prevState.currentPageNum + 1 }));
+			const newsItems = response.data;
+			this.setState(prevState => ({
+				newsData: prevState.newsData.concat(newsItems),
+				currentPageNum: prevState.currentPageNum + 1,
+				hasMoreItems: !(newsItems.length < newsFeedPageSize)
+			}));
 		});
 	}
 	render(props, state) {
 		console.log(state.newsData);
 		return (
 			<div class={styles.rootContainer}>
-				<div class="columns is-multiline">
-					{
-						state.newsData.map(news => (
-							<div class="column is-half">
-								{
-									news.description ?
-									<a href={`/news/${news.id}/${news.slug}`} >
+				<InfiniteScroll
+					pageStart={1}
+					loadMore={this.fetchNewsItems}
+					hasMore={state.hasMoreItems}
+					loader={<Loading />}
+				>
+					<div class="columns is-multiline">
+						{
+							state.newsData.map(news => (
+								<div class="column is-half">
+									{
+										news.description ?
+										<a href={`/news/${news.id}/${news.slug}`} >
+											<NewsCard newsData={news} />
+										</a>
+										:
 										<NewsCard newsData={news} />
-									</a>
-									:
-									<NewsCard newsData={news} />
-								}
-							</div>
-						))
-					}
-				</div>
+									}
+								</div>
+							))
+						}
+					</div>
+				</InfiniteScroll>
 			</div>
 		);
 	}
