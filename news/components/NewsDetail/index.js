@@ -31,12 +31,17 @@ export default class NewsDetail extends Component {
 						<div class="content">
 							<h1>{newsDetails.title}</h1>
 						</div>
-					</div>
-					<figure class="image">
-						<img class={styles.headerImageStyles} src={newsDetails.media[0].href} alt="News Header Image" />
-					</figure>
-					<div class={styles.rootContainer}>
-						<div dangerouslySetInnerHTML={{__html: newsDetails.description }} />
+						<figure class="image">
+							<img src={newsDetails.media[0].href} alt="News Header Image" />
+						</figure>
+						<div class={styles.newsContentStyles}>
+						{
+							newsDetails.description ?
+							<div  dangerouslySetInnerHTML={{__html: newsDetails.description }} />
+							:
+							<p>{newsDetails.summary}</p>
+						}
+						</div>
 						<DownloadAppCard />
 					</div>
 				</div>

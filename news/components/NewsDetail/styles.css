@@ -2,9 +2,10 @@
 	padding: 5% 15%;
 }
 
-.headerImageStyles {
-	max-height: 540px;
+.newsContentStyles {
+	margin: 5% auto;
 }
+
 @media screen and (max-width: 1023px) {
 	.rootContainer {
 		padding: 5% 7%;
