@@ -1,0 +1,8 @@
+.socialShareContainer {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+.shareBtnStyles {
+	margin: 1vh 2vw;
+}
