@@ -10,7 +10,6 @@ const newsDateFormat = {
 	hour12: true
 };
 
-const DateFormatter = Intl.DateTimeFormat('en-IN', newsDateFormat);
 
 const NewsCard = (props) => {
 	const { newsData } = props;
@@ -25,7 +24,7 @@ const NewsCard = (props) => {
 			<div class="content">
 				<h3>{newsData.title}</h3>
 				<p>{newsData.summary}</p>
-				<div class="content is-small">{`${newsData.author} | ${DateFormatter.format(new Date(newsData.createdAt))}`}</div>
+				<div class="content is-small">{`${newsData.author} | ${new Date(newsData.createdAt).toLocaleString('en-IN', newsDateFormat)}`}</div>
 			</div>
 		</div>
 		{/* <footer class="card-footer">

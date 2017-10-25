@@ -6,6 +6,15 @@ import Loading from '../common/Loading';
 import DownloadAppCard from '../common/DownloadAppCard';
 // import _ from 'lodash';
 
+const newsDateFormat = {
+	day: 'numeric',
+	month: 'numeric',
+	year: 'numeric',
+	hour: 'numeric',
+	minute:'numeric',
+	hour12: true
+};
+
 export default class NewsDetail extends Component {
 	state = {
 		newsDetails: undefined,
@@ -30,6 +39,9 @@ export default class NewsDetail extends Component {
 					<div class={styles.rootContainer}>
 						<div class="content">
 							<h1>{newsDetails.title}</h1>
+						</div>
+						<div class="content is-small">
+							<h5>{`${newsDetails.author} | ${new Date(newsDetails.createdAt).toLocaleString('en-IN', newsDateFormat)}`}</h5>
 						</div>
 						<figure class="image">
 							<img src={newsDetails.media[0].href} alt="News Header Image" />
