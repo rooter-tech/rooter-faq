@@ -21,7 +21,7 @@ export default class App extends Component {
 				<Header />
 				<Router onChange={this.handleRoute}>
 					<NewsFeed path="/news/" />
-					<NewsDetail path="/news/:newsid/:newsslug" />
+					<NewsDetail path="/news/:newsid/:newsslug?" />
 				</Router>
 			</div>
 		);
