@@ -14,6 +14,9 @@ app.get('/', (req, res) => {
 app.get('/web/*', (req, res) => {
 	res.sendFile(__dirname + '/build/web/index.html');
 });
+app.get('/news/*', (req, res) => {
+	res.sendFile(__dirname + '/build/news/index.html');
+});
 app.listen(port, (err) => {
 	if (err) {
 		console.log('Error in firing up the server !');

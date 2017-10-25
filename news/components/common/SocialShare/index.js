@@ -6,8 +6,7 @@ export default class SocialShare extends Component {
 	handleTwitterShare = () => {
 		window.open(`https://twitter.com/intent/tweet?text=${this.props.title}&url=${this.props.url}`, 'Twitter');
 	}
-	handleFacebookShare = (event) => {
-		event.nativeEvent.stopPropagation();
+	handleFacebookShare = () => {
 		window.open(`https://www.facebook.com/sharer/sharer.php?u=${this.props.url}`, 'Facebook');
 	}
 	handleWhatsappShare = () => {
