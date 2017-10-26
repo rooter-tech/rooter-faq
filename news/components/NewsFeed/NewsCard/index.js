@@ -1,16 +1,7 @@
 import { h } from 'preact';
 import { Link } from 'preact-router';
 import SocialShare from '../../common/SocialShare';
-
-const newsDateFormat = {
-	day: 'numeric',
-	month: 'numeric',
-	year: 'numeric',
-	hour: 'numeric',
-	minute:'numeric',
-	hour12: true
-};
-
+import NewsAuthor from '../../common/NewsAuthor';
 
 const NewsCard = (props) => {
 	const { newsData } = props;
@@ -26,7 +17,10 @@ const NewsCard = (props) => {
 				<div class="content">
 					<h3>{newsData.title}</h3>
 					<p>{newsData.summary}</p>
-					<div class="content is-small">{`${newsData.author} | ${new Date(newsData.createdAt).toLocaleString('en-IN', newsDateFormat)}`}</div>
+					<NewsAuthor
+						author={newsData.author}
+						createdAt={new Date(newsData.createdAt)}
+					/>
 				</div>
 			</div>
 		</Link>
