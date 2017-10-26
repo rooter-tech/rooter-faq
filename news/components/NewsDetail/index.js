@@ -1,4 +1,5 @@
 import { h, Component } from 'preact';
+import { Helmet } from "react-helmet";
 import axios from 'axios';
 import styles from './styles.css';
 import API from '../api';
@@ -36,6 +37,9 @@ export default class NewsDetail extends Component {
 				<Loading />
 				:
 				<div>
+					<Helmet>
+						<title>{newsDetails.title}</title>
+					</Helmet>
 					<div class={styles.rootContainer}>
 						<div class="content">
 							<h1>{newsDetails.title}</h1>
