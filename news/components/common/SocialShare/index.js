@@ -1,16 +1,35 @@
 import { h, Component } from 'preact';
 import bowser from 'bowser';
 import styles from './styles.css';
+import { logEventGA } from '../../analytics';
 
 export default class SocialShare extends Component {
 	handleTwitterShare = () => {
-		window.open(`https://twitter.com/intent/tweet?text=${this.props.title}&url=${this.props.url}`, 'Twitter');
+		// GA Event - When user shares the news - Twitter
+		logEventGA({
+			category: 'Share',
+			action: 'News',
+			label: `${this.props.url}, Twitter`
+		});
+		window.open(`https://twitter.com/intent/tweet?text=${this.props.title}&url=${`${this.props.url}?utm_source=Twitter`}`, 'Twitter');
 	}
 	handleFacebookShare = () => {
-		window.open(`https://www.facebook.com/sharer/sharer.php?u=${this.props.url}`, 'Facebook');
+		// GA Event - When user shares the news - Facebook
+		logEventGA({
+			category: 'Share',
+			action: 'News',
+			label: `${this.props.url}, Facebook`
+		});
+		window.open(`https://www.facebook.com/sharer/sharer.php?u=${`${this.props.url}?utm_source=Facebook`}`, 'Facebook');
 	}
 	handleWhatsappShare = () => {
-		window.open(`whatsapp://send?text=${this.props.title} ${this.props.url}`, 'Whatsapp');
+		// GA Event - When user shares the news - Whatsapp
+		logEventGA({
+			category: 'Share',
+			action: 'News',
+			label: `${this.props.url}, Whatsapp`
+		});
+		window.open(`whatsapp://send?text=${this.props.title} ${`${this.props.url}?utm_source=Whatsapp`}`, 'Whatsapp');
 	}
 	handleLinkCopy = () => {
 		const UrlInput = document.getElementById("copyUrl");

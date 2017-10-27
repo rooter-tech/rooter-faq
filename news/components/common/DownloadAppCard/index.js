@@ -1,10 +1,19 @@
 import { h } from 'preact';
 // import { logEventGA } from '../../../analytics';
 import styles from './styles.css';
+import { logEventGA } from '../../analytics';
 
-const DownloadAppCard = () => (
+const DownloadAppCard = (props) => (
     <a
         href="https://rooter.app.link/PWADownload"
+		onClick={() => {
+            // GA Event - When user downloads the app from the detail news page
+			logEventGA({
+				category: 'Download',
+				action: 'Detail_news',
+				label: `${props.newsId}`
+			});
+		}}
     >
         <div class={`box ${styles.downloadAppRoot}`}>
             <div class={styles.downloadContent}>

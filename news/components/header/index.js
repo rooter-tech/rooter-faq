@@ -12,7 +12,7 @@ export default class Header extends Component {
 			<header>
 				<nav class="navbar">
 					<div class="navbar-brand">
-						<a class="navbar-item" href=''><img src="https://s3-ap-southeast-1.amazonaws.com/rooter-live-assets/Rooter-Brand.png" alt="Rooter" /></a>
+						<a class="navbar-item" href='/news'><img src="https://s3-ap-southeast-1.amazonaws.com/rooter-live-assets/Rooter-Brand.png" alt="Rooter" /></a>
 						{/* <div class={`navbar-burger ${state.showMobileNavMenu && 'is-active'}`} onClick={this.toggleMobileNav}>
 							<span />
 							<span />
