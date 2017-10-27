@@ -38,12 +38,25 @@ export default class NewsDetail extends Component {
 				<div>
 					<Helmet>
 						<title>{newsDetails.title}</title>
-						{/* Open graph meta tags */}
+						<meta name="title" content={newsDetails.title} />
+						<meta name="description" content={newsDetails.subTitle || newsDetails.summary} />
 						<meta property="og:url" content={`https://www.rooter.io/news/${newsDetails.id}/${newsDetails.slug || ''}`} />
 						<meta property="og:type" content="article" />
 						<meta property="og:title" content={newsDetails.title} />
-						<meta property="og:description" content={newsDetails.summary} />
+						<meta property="og:description" content={newsDetails.subTitle || newsDetails.summary} />
 						<meta property="og:image" content={newsDetails.media[0].href} />
+						<meta name="twitter:title" content={newsDetails.title} />
+						<meta name="twitter:description" content={newsDetails.subTitle || newsDetails.summary} />
+						<meta name="twitter:image" content={newsDetails.media[0].href} />
+						<meta name="twitter:card" content="summary_large_image" />
+						<meta name="robots" content="index, follow" />
+						<meta name="twitter:site" content="@HelloRooter" />
+						<meta name="twitter:image:src" content={newsDetails.media[0].href} />
+						<meta name="twitter:image:alt" content={newsDetails.title} />
+						<meta property="author" content={newsDetails.author} />
+						<meta property="article:published_time" content={newsDetails.createdAt} />
+						<meta property="article:publisher" content="https://www.facebook.com/hellorooter/" />
+						<meta property="article:author" content={newsDetails.author} />
 					</Helmet>
 					<div class={styles.rootContainer}>
 						<div class="content">
@@ -54,7 +67,7 @@ export default class NewsDetail extends Component {
 							createdAt={new Date(newsDetails.createdAt)}
 						/>
 						<figure class="image">
-							<img src={newsDetails.media[0].href} alt="News Header Image" />
+							<img src={newsDetails.media[0].href} alt={newsDetails.title} />
 						</figure>
 						<div class={styles.newsContentStyles}>
 						{

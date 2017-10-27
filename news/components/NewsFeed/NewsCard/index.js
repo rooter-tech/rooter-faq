@@ -21,7 +21,7 @@ const NewsCard = (props) => {
 		>
 			<div class="card-image">
 				<figure class="image is-4by3">
-					<img src={newsData.media[0].href} alt="News Header Image" />
+					<img src={newsData.media[0].href} alt={newsData.title} />
 				</figure>
 			</div>
 			<div class="card-content">
