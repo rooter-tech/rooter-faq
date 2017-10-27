@@ -9,9 +9,7 @@ function init() {
 
 // Initializing Google Analytics
 import ReactGA from 'react-ga';
-ReactGA.initialize('UA-105786949-6', {
-	debug: true
-});
+ReactGA.initialize('UA-105786949-6');
 
 // in development, set up HMR:
 if (module.hot) {
