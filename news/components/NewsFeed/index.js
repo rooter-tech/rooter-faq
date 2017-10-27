@@ -38,7 +38,6 @@ export default class NewsFeed extends Component {
 		});
 	}
 	render(props, state) {
-		console.log(state.newsData);
 		return (
 			<div class={styles.rootContainer}>
 				<InfiniteScroll

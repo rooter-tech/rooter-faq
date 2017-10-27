@@ -14,7 +14,6 @@ export default class NewsDetail extends Component {
 		isFetchingNewsDetails: true
 	}
 	componentDidMount() {
-		console.log(this.props);
 		this.fetchNewsDetails(this.props.newsid);
 		logPageView();
 		// GA Event - When unique user lands on the news website
