@@ -6,7 +6,7 @@ import API from '../api';
 import Loading from '../common/Loading';
 import DownloadAppCard from '../common/DownloadAppCard';
 import NewsAuthor from '../common/NewsAuthor';
-
+import { logPageView, logEventGA } from '../analytics';
 
 export default class NewsDetail extends Component {
 	state = {
@@ -14,7 +14,15 @@ export default class NewsDetail extends Component {
 		isFetchingNewsDetails: true
 	}
 	componentDidMount() {
+		console.log(this.props);
 		this.fetchNewsDetails(this.props.newsid);
+		logPageView();
+		// GA Event - When unique user lands on the news website
+		logEventGA({
+			category: 'Universal',
+			action: 'User_detail_landing',
+			label: `${this.props.newsid}, ${this.props.utm_source || 'Direct'}`
+		});
 	}
 	fetchNewsDetails = (newsId) => {
 		axios.get(`${API.baseURL}News/${newsId}/details`).then((response) => {
@@ -31,6 +39,12 @@ export default class NewsDetail extends Component {
 				<div>
 					<Helmet>
 						<title>{newsDetails.title}</title>
+						{/* Open graph meta tags */}
+						<meta property="og:url" content={`https://www.rooter.io/news/${newsDetails.id}/${newsDetails.slug || ''}`} />
+						<meta property="og:type" content="article" />
+						<meta property="og:title" content={newsDetails.title} />
+						<meta property="og:description" content={newsDetails.summary} />
+						<meta property="og:image" content={newsDetails.media[0].href} />
 					</Helmet>
 					<div class={styles.rootContainer}>
 						<div class="content">
@@ -51,7 +65,7 @@ export default class NewsDetail extends Component {
 							<p>{newsDetails.summary}</p>
 						}
 						</div>
-						<DownloadAppCard />
+						<DownloadAppCard newsId={newsDetails.id}/>
 					</div>
 				</div>
 		);

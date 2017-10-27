@@ -7,6 +7,12 @@ function init() {
 	root = render(<App />, document.body, root);
 }
 
+// Initializing Google Analytics
+import ReactGA from 'react-ga';
+ReactGA.initialize('UA-105786949-6', {
+	debug: true
+});
+
 // in development, set up HMR:
 if (module.hot) {
 	//require('preact/devtools');   // turn this on if you want to enable React DevTools!

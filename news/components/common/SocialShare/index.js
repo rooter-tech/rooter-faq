@@ -1,15 +1,34 @@
 import { h, Component } from 'preact';
 import bowser from 'bowser';
 import styles from './styles.css';
+import { logEventGA } from '../../analytics';
 
 export default class SocialShare extends Component {
 	handleTwitterShare = () => {
+		// GA Event - When user shares the news - Twitter
+		logEventGA({
+			category: 'Share',
+			action: 'News',
+			label: `${this.props.url}, Twitter`
+		});
 		window.open(`https://twitter.com/intent/tweet?text=${this.props.title}&url=${this.props.url}`, 'Twitter');
 	}
 	handleFacebookShare = () => {
+		// GA Event - When user shares the news - Facebook
+		logEventGA({
+			category: 'Share',
+			action: 'News',
+			label: `${this.props.url}, Facebook`
+		});
 		window.open(`https://www.facebook.com/sharer/sharer.php?u=${this.props.url}`, 'Facebook');
 	}
 	handleWhatsappShare = () => {
+		// GA Event - When user shares the news - Whatsapp
+		logEventGA({
+			category: 'Share',
+			action: 'News',
+			label: `${this.props.url}, Whatsapp`
+		});
 		window.open(`whatsapp://send?text=${this.props.title} ${this.props.url}`, 'Whatsapp');
 	}
 	handleLinkCopy = () => {

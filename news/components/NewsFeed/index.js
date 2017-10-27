@@ -6,12 +6,21 @@ import { newsFeedPageSize } from '../constants';
 import NewsCard from './NewsCard';
 import InfiniteScroll from 'react-infinite-scroller';
 import Loading from '../common/Loading';
+import { logPageView, logEventGA } from '../analytics';
 
 export default class NewsFeed extends Component {
 	state = {
 		newsData: [],
 		currentPageNum: 1,
 		hasMoreItems: true
+	}
+	componentDidMount() {
+		logPageView();
+		// GA Event - When unique user lands on the news website
+		logEventGA({
+			category: 'Universal',
+			action: 'User_News_landing'
+		});
 	}
 	fetchNewsItems = () => {
 		axios.get(`${API.baseURL}News/feed`, {
