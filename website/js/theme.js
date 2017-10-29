@@ -90,10 +90,13 @@
     /*------------------------------
          top-share-show-hide
     ------------------------------ */
-    document.getElementById("share_by").style.display = "none";
-    $("#ts_button").on('click', function() {
-        $("#share_by").fadeToggle("slow");
-    });
+    if (document.getElementById("share_by")) {
+        document.getElementById("share_by").style.display = "none";
+        $("#ts_button").on('click', function() {
+            $("#share_by").fadeToggle("slow");
+        });
+    }
+    
 
 
     /*---------------------
