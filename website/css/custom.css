@@ -139,6 +139,13 @@ clear: both;
   font-weight: bold;
 }
 
+.media-text {
+  font-size: 18px;
+  color: #ffffff;
+  font-weight: bold;
+	padding-bottom: 10px;
+}
+
 
 .line {
   object-fit: contain;
@@ -344,4 +351,9 @@ text-align-last: center;
 
 #yt-player {
   height: 50vh;
+}
+
+.owl-nav {
+  display: flex;
+  justify-content: space-around;
 }

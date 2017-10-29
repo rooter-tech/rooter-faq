@@ -2978,6 +2978,24 @@ ul.tags li a:hover {
     line-height: 24px;
 }
 
+.link-white a{
+	color: #fff;
+    display: block;
+    font-size: 14px;
+    text-align: left;
+    text-decoration: none;
+    font-weight: bold;
+	cursor: pointer;
+    line-height: 18px;
+	padding:10px 0 0;
+}
+.srp-date-white {
+	color: #fff;
+    font-size: 12px;
+	opacity: 0.8;
+}
+
+
 .comment-area {
     margin-bottom: 104px;
 }

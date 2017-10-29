@@ -11,6 +11,16 @@ $(function() {
     $('.login-wap, #mobile_login').click(function() {
 		logCTevent('Static_login');
 	});
+	 // Logs to CT when user clicks on news section
+	 $('.sports-news-cta').click(function() {
+		 console.log('Yo1')
+		logCTevent('Nav_news_click');
+	});
+	// Logs to CT when user clicks on Rooter live
+	$('.rooter-live-cta').click(function() {
+		console.log('Yo2')
+		logCTevent('Nav_rooter_live_click');
+	});
     // Logs to CT on click of social icons in footer
     $('a[href="https://www.facebook.com/hellorooter/"]').click(function() {
 		logCTevent('Social', { Platform: 'Facebook' });
