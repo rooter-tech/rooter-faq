@@ -7,7 +7,7 @@
     "prestart": "npm run build",
     "build:main": "cross-env NODE_ENV=production webpack --config webpack.config.help.babel.js -p --progress",
     "build:news": "cross-env NODE_ENV=production API_TYPE=prod webpack --config webpack.config.news.babel.js -p --progress",
-    "build": "rm -rf build && npm run build:main && npm run build:news",
+    "build": "rm -rf build && npm run build:main",
     "prebuild": "mkdirp build",
     "lint": "eslint src test"
   },
@@ -66,6 +66,7 @@
     "date-fns": "^1.29.0",
     "es6-promise": "^4.1.0",
     "express": "^4.15.3",
+    "forcedomain": "^0.8.1",
     "lodash": "^4.17.4",
     "lunr": "^2.0.3",
     "preact": "^8.1.0",
