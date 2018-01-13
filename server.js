@@ -10,13 +10,13 @@ app.use(forceDomain({
 	hostname: 'www.rooter.io',
 	protocol: 'https'
 }));
-app.use(express.static('build'));
+app.use(express.static('website'));
 app.get('/', (req, res) => {
-	res.sendFile(__dirname + '/build/index.html');
+	res.sendFile(__dirname + '/website/index.html');
 });
-app.get('/web/*', (req, res) => {
-	res.sendFile(__dirname + '/build/web/index.html');
-});
+// app.get('/web/*', (req, res) => {
+// 	res.sendFile(__dirname + '/build/web/index.html');
+// });
 app.listen(port, (err) => {
 	if (err) {
 		console.log('Error in firing up the server !');
