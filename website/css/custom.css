@@ -357,3 +357,8 @@ text-align-last: center;
   display: flex;
   justify-content: space-around;
 }
+.group-image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
